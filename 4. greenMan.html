@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+    <title>Traffic Lights</title>
+
+	<link rel="text/css" href="styling.css">
+
+	<style>
+		body{
+		margin: 0px;
+		}
+		
+		#container{
+		position: absolute;
+		top: 30px;
+		left: 50px;
+			
+		width: 140px;
+		height: 390px;
+		background-color: black;
+		}
+		
+		#red{
+		background-color: red;
+		display:none;
+		position: absolute;
+		top: 9px;
+		height: 100px;
+		border-radius: 50%;
+		margin: 20px;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		margin: 20px;	
+		}
+		
+		#orange{
+		background-color: orange;
+		display:none;
+		position: absolute;
+		top: 130px; 
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		margin: 20px;
+		}
+		
+		#green{
+		background-color: limegreen;
+		position: absolute;
+		top: 250px;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		margin: 20px;
+		}
+				
+		#poll{
+		width: 50px;
+		height: 250px;
+		background-color: black;
+		margin-left: 45px;
+		}
+		
+		#control-box{
+		position: absolute;
+		top: 40px;
+		left: 250px;
+		width: 250px;
+		height: 450px;
+		background-color: yellow;	
+		}
+		
+		#black-box{
+		position: absolute;
+		top: 65px;
+		left: 265px;
+		width: 220px;
+		height: 400px;
+		background-color: black;	
+		}
+		
+		#redman{
+		position: absolute;
+		top: 90px;
+		left: 340px;
+		}
+		
+		#greenman{
+		position: absolute;
+		top: 260px;
+		left: 320px;
+		display: none;
+		}
+		
+		#red-button{
+		position: absolute;
+		top: 420px;
+		left: 358px;
+		width: 35px;
+		height: 35px;
+		background-color: red;
+		border-radius: 50%;
+		cursor: pointer;
+		}
+		
+		#green-button{
+		position: absolute;
+		top: 420px;
+		left: 358px;
+		width: 35px;
+		height: 35px;
+		background-color: green;
+		border-radius: 50%;
+		cursor: pointer;
+		}
+		
+		#mouse{
+		margin-left: 290px;
+		font-weight: bolder;
+		}
+	</style>
+	
+</head>
+
+<body>
+
+<div id="container">	
+		
+<div id="red"></div>
+<div id="orange"></div>	
+<div id="green"></div>	
+	
+<div id="poll"></div>	
+	
+	<div id="control-box"></div>
+	<div id="black-box"></div>
+	<img src="Lights/green-man.png" id="greenman" alt="green man image">
+	<img src="Lights/red-man.png" id="redman" alt="red man image">
+	<div id="red-button"></div>
+</div>	
+	
+	<h2 id="mouse">Press on the pedestrian control button to cross the busy road.</h2>
+	
+<script>
+
+// green light ON & red man ON & red button ON 	
+document.getElementById("red-button").onclick = function(){       
+	
+// orange light ON after 4s 	
+setTimeout(function () {
+document.getElementById("orange").style.display= "block";          
+}, 4000);	
+	
+// green light OFF after 5s 	
+setTimeout(function () {
+document.getElementById("green").style.display= "none";          
+}, 5000);		
+	
+// red light ON after 6s 
+setTimeout(function () {
+document.getElementById("red").style.display= "block";          
+}, 6000);		
+	
+// orange light OFF after 7s 	
+setTimeout(function () {
+document.getElementById("orange").style.display= "none";         
+}, 7000);	
+	
+// redman 0FF after 8s 
+setTimeout(function () {
+document.getElementById("redman").style.display= "none";        
+}, 8000);	
+	
+// red button OFF after 4s 
+setTimeout(function () {
+document.getElementById("red-button").style.display= "none";     
+}, 4000);		
+	
+// greenman ON & green button ON after 8s 	
+setTimeout(function () {
+document.getElementById("greenman").style.display= "block";       
+}, 8000);		
+	
+// greenman OFF & green button OFF after 12s 
+setTimeout(function () {
+document.getElementById("greenman").style.display= "none";     
+}, 12000);	
+	
+// redman ON & red button ON after 12s 	
+setTimeout(function () {
+document.getElementById("redman").style.display= "block";     
+}, 12000);	
+	
+// orange light ON & after 13s 	
+setTimeout(function () {
+document.getElementById("orange").style.display= "block";       
+}, 13000);	
+	
+// red light OUT after 1s		
+setTimeout(function () {
+document.getElementById("red").style.display= "none";       
+}, 14000);	
+	
+// orange light OUT after s		
+setTimeout(function () {
+document.getElementById("orange").style.display= "none";       
+}, 14000);	
+	
+// greenman ON &  green button ON after 8s //	
+setTimeout(function () {
+document.getElementById("green").style.display= "block";       
+}, 14000);	
+	
+setTimeout(function(){	
+document.getElementById("red-button").style.display= "block";
+}, 14000);
+	
+}	
+	
+</script>
+
+</body>
+</html>
+
+<!--
+ green light ON & red man ON & red button ON
+ press red button
+ green light OFF & red man ON & red button ON
+ orange light ON & red man ON & red button ON
+ orange light ON & red light ON & red man ON & red button ON
+ red light ON & red man ON & red button ON
+ red light ON & green man ON & green button ON
+ red light ON & green man OFF & green button OFF 
+ red light & red man & red button
+ red light & orange light & red man & red button
+ green light & red man & red button
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
